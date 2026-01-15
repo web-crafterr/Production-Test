@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home-Harvest Hope Food Bank</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+   <header class="navbar">
+    <div class="logo">
+        <img src="./Assets/HarvestHopeLogo.png" alt="Harvest Hope" width="80" height="70">
+    </div>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="impact.html" class="nav-link">Our Impact</a>
+        <a href="services.html" class="nav-link">Community Services</a>
+        <a href="staff.html" class="nav-link">Our Staff</a>
+    </nav>
+    <a class="btn-primary btn-arrow" href="staff.html">
+        Get help
+        <span class="arrow-circle">➜</span>
+    </a>
+</header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>“Nourishing Neighbors.<br> Growing Hope.”</h1>
+            <div class="hero-buttons">
+                <a class="btn-primary btn-arrow-hero" href="staff.html">
+                    Volunteer
+                    <span class="arrow-circle-hero">➜</span>
+
+                </a> <a class="btn-outline" href="staff.html">Get help</a>
+            </div>
+        </div>
+
+    </section>
+    <div class="hero-strip">
+        <div class="scrolling-text">
+            <p>“Feeding families. Building community.”</p>
+            <p>“Feeding families. Building community.”</p>
+            <p>“Feeding families. Building community.”</p>
+            <p>“Feeding families. Building community.”</p>
+            <p>“Feeding families. Building community.”</p>
+
+            <!-- Duplicate content for seamless loop -->
+            <p>“Feeding families. Building community.”</p>
+            <p>“Feeding families. Building community.”</p>
+            <p>“Feeding families. Building community.”</p>
+            <p>“Feeding families. Building community.”</p>
+            <p>“Feeding families. Building community.”</p>
+        </div>
+    </div>
+
+    <!-- MISSION -->
+    <section class="mission">
+        <h2>“Our Mission”</h2>
+        <!-- <div class="mission-container"> -->
+        <p class="mission-text">
+            Harvest Hope Community Food Bank works to end food insecurity by
+            connecting neighbors with healthy meals, local farms, and one another.
+            We believe that everyone deserves access to nutritious food and the
+            dignity that comes with choice, compassion, and community.
+        </p>
+
+        <div class="mission-box">
+            <div class="mission-cards">
+                <div class="card card-a">
+                    <img src="./Assets/gardenpic.png" alt="">
+                    <span>Food Access</span>
+                </div>
+                <div class="card card-b">
+                    <img src="./Assets/NutritionClass.png" alt="">
+                    <span>Healthy Meals</span>
+                </div>
+                <div class="card card-b">
+                    <img src="./Assets/volunteer2.png" alt="">
+                    <span>Dignity & Choice</span>
+                </div>
+                <div class="card card-a">
+                    <img src="./Assets/LopezFamily.png" alt="">
+                    <span>Strong Community</span>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- </div> -->
+
+    </section>
+
+    <!-- VOLUNTEER -->
+    <section class="volunteer">
+        <h2>Contact Us to Volunteer!</h2>
+        <form>
+            <input type="text" placeholder="Your email address">
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="./Assets/HarvestHopeLogo.png" alt="">
+            <p>
+                Harvest Hope Food Bank<br>
+                1250 City Avenue<br>
+                Your City, NJ
+            </p>
+        </div>
+
+        <div class="footer-right">
+            <p>(555) 555-2047</p>
+            <p>www.harvesthopefoodbank.org</p>
+            <p>info@harvesthopefoodbank.org</p>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        © 2026 Community Food Bank. All rights reserved.
+    </div>
+
+<!-- ✅ JAVASCRIPT INSIDE HTML -->
+<script>
+  const links = document.querySelectorAll(".nav-link");
+  const currentPage =
+    location.pathname.split("/").pop() || "index.html";
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+
+    link.addEventListener("click", () => {
+      links.forEach(l => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+</script>
+
+
+</body>
+</html>
